@@ -15,6 +15,7 @@ window.onload = () => {
 
     req.addEventListener('load', function(){
       sessionStorage.setItem(USER_NAME_KEY, this.responseText);
+      location.reload();
     });
     req.open('GET',action);
     req.send();
