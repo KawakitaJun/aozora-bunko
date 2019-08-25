@@ -47,11 +47,41 @@
             <li class="nav-item">
               <a class="nav-link" href="#">カテゴリ一覧</a>
             </li>
+            <li class="nav-item" id="loginBtnArea">
+              <button class="nav-link" data-toggle="modal" data-target="#loginModal">
+                  <i class="fa fa-sign-in-alt"></i>ログイン
+              </button>
+            </li>
+            <li id="userName" class="nav-item ml-3">
+            </li>
           </ul>
         </div>
       </div>
     </nav>
   </header>
+  <!-- モーダル -->
+  <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="loginModalLabel">ログイン</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <form id="login-form" action="./stub/user.json" method="POST">
+          <div class="modal-body">
+            <input type="text" class="form-control mb-3" name="user_id" placeholder="UserID">
+            <input type="password" class="form-control" name="user_pw" placeholder="Password">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">閉じる</button>
+            <button type="button" class="btn btn-primary">ログイン</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
     <!-- カルーセル -->
   <div id="carouselExampleIndicators" class="carousel slide mb-5" data-ride="carousel">
     <ol class="carousel-indicators">
